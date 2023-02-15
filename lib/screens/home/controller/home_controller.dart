@@ -74,14 +74,19 @@ class HomeController extends GetxController {
   }
 
   onIncrementItemCart1(index,cartType) {
-    cartType[index].itemQuantity! + 1;
+    print( cartType[index].itemQuantity!);
+    cartType[index].itemQuantity++ ;
     cartType.refresh();
+    print( "/////");
+    print( cartType[index].itemQuantity!);
+
+
   }
 
   onDecrementItem(index,cartType) {
     if (cartType[index].itemQuantity! != 1) {
       if (cartType[index].itemQuantity! > 1) {
-        cartType[index].itemQuantity! - 1;
+        cartType[index].itemQuantity --;
 
         cartType.refresh();
         print(cartType[index].itemQuantity!);

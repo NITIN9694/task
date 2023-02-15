@@ -206,7 +206,6 @@ class Cat6 {
     price = json['price'];
     instock = json['instock'];
     isAddItem= false;
-    itemQuantity=1;
   }
 
   Map<String, dynamic> toJson() {
